@@ -19,8 +19,17 @@ function App() {
   }
 
   useEffect(() => {
-    // todo 가 바뀌었는지 감지하는 함수
+
+  }, []); // 이 컴포넌트가 마운트 될 때 (처음 보이기 시작할 때) 실행됨
+
+  useEffect(() => {
+
+  }); // 리렌더링 될 때 마다 실행됨
+
+  useEffect(() => {
     console.log('changedTODO', todo);
+    // todo 가 바뀔 때 마다 실행됨
+    // {} !== {}
   }, [todo]);
 
   return (
